@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Trending Traditions</title>
 
 <style>
@@ -14,8 +17,8 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:#f7f7f7;
+font-family:'Segoe UI',sans-serif;
+background:#fafafa;
 color:#222;
 line-height:1.6;
 }
@@ -27,26 +30,26 @@ scroll-behavior:smooth;
 header{
 position:sticky;
 top:0;
+z-index:999;
 background:white;
-padding:15px 10%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
-z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#6F4EF6;
 }
 
 nav a{
-margin-left:20px;
 text-decoration:none;
 color:#222;
-font-weight:bold;
+font-weight:600;
+margin-left:25px;
 }
 
 nav a:hover{
@@ -55,8 +58,8 @@ color:#6F4EF6;
 
 .hero{
 height:90vh;
-background:linear-gradient(
-rgba(0,0,0,.45),
+background:
+linear-gradient(rgba(0,0,0,.45),
 rgba(0,0,0,.45)),
 url("good4you.jpg");
 background-size:cover;
@@ -66,106 +69,112 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-padding:20px;
+padding:25px;
 }
 
 .hero-content{
-max-width:800px;
+max-width:850px;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:4.5rem;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:1.3rem;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .btn{
 background:#6F4EF6;
+padding:15px 35px;
 color:white;
-padding:15px 30px;
-border:none;
-border-radius:5px;
-font-size:1rem;
 text-decoration:none;
-display:inline-block;
+border-radius:8px;
+font-weight:bold;
 }
 
 .btn:hover{
-background:#5a3fe0;
+background:#5637df;
 }
 
 section{
-padding:80px 10%;
+padding:90px 10%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:2.2rem;
-margin-bottom:40px;
+font-size:2.5rem;
+margin-bottom:20px;
 }
 
-.collections{
+.subtitle{
+text-align:center;
+max-width:750px;
+margin:auto;
+margin-bottom:50px;
+color:#666;
+}
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.collection-card{
+.card{
 background:white;
+border-radius:12px;
 padding:25px;
-border-radius:10px;
 box-shadow:0 0 15px rgba(0,0,0,.08);
 transition:.3s;
 }
 
-.collection-card:hover{
-transform:translateY(-5px);
+.card:hover{
+transform:translateY(-6px);
 }
 
-.collection-card h3{
-color:#6F4EF6;
+.card h3{
 margin-bottom:10px;
+color:#6F4EF6;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
 
 .product{
 background:white;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 0 15px rgba(0,0,0,.08);
+box-shadow:0 0 20px rgba(0,0,0,.08);
 }
 
 .product img{
 width:100%;
-height:350px;
+height:420px;
 object-fit:cover;
 }
 
-.product-info{
-padding:20px;
+.product-content{
+padding:25px;
 }
 
 .price{
-font-size:1.2rem;
+font-size:22px;
 font-weight:bold;
 color:#6F4EF6;
-margin-top:10px;
+margin-top:15px;
 }
 
 .about{
 background:white;
 }
 
-.about p{
+.about-text{
 max-width:900px;
 margin:auto;
 font-size:1.1rem;
@@ -177,53 +186,58 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
-.policy-card{
+.policy{
 background:white;
-padding:25px;
-border-radius:10px;
+padding:30px;
 box-shadow:0 0 15px rgba(0,0,0,.08);
+border-radius:12px;
+}
+
+.policy h3{
+color:#6F4EF6;
+margin-bottom:15px;
 }
 
 .newsletter{
 background:#6F4EF6;
 color:white;
 text-align:center;
-padding:70px 20px;
 }
 
 .newsletter input{
 padding:15px;
-width:300px;
-max-width:80%;
+width:350px;
+max-width:90%;
 border:none;
-border-radius:5px;
+border-radius:8px;
 margin-top:20px;
 }
 
 .newsletter button{
 padding:15px 25px;
-border:none;
-margin-left:10px;
 background:black;
+border:none;
 color:white;
-border-radius:5px;
+margin-left:10px;
+border-radius:8px;
 cursor:pointer;
 }
 
 footer{
 background:black;
 color:white;
+padding:50px;
 text-align:center;
-padding:40px;
 }
 
-.socials a{
+footer a{
 color:white;
 text-decoration:none;
-margin:0 10px;
+margin:0 12px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -236,9 +250,9 @@ Trending Traditions
 
 <nav>
 #collectionsCollections</a>
-<productsProducts</a>
-<a hrefbout</a>
-#policiesPolicies</a>
+<a hreftsProducts</a>
+#aboutAbout</a>
+<a liciesPolicies</a>
 </nav>
 
 </header>
@@ -247,17 +261,15 @@ Trending Traditions
 
 <div class="hero-content">
 
-<h1>
-Turning Today's Trends Into Tomorrow's Traditions
-</h1>
+<h1>Turning Today's Trends Into Tomorrow's Traditions</h1>
 
 <p>
-Greeting cards inspired by music, sports, entertainment,
-and the moments worth remembering.
+Modern greeting cards inspired by sports, music, entertainment,
+and the cultural moments worth remembering.
 </p>
 
-#collections
-Shop Collections
+#products
+Shop Best Sellers
 </a>
 
 </div>
@@ -266,45 +278,48 @@ Shop Collections
 
 <section id="collections">
 
-<h2 class="section-title">
-Featured Collections
-</h2>
+<h2 class="title">Featured Collections</h2>
 
-<div class="collections">
+<p class="subtitle">
+Greeting cards designed around shared cultural experiences,
+not just traditional occasions.
+</p>
 
-<div class="collection-card">
+<div class="grid">
+
+<div class="card">
 <h3>Happy Birthday, Obviously</h3>
-<p>Birthday cards with cultural awareness, humor, and personality.</p>
+<p>Birthday cards with humor, personality, and pop culture awareness.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Good 4 You</h3>
-<p>Celebrating achievements, graduations, promotions, and milestones.</p>
+<p>Cards celebrating graduations, engagements, promotions, and achievements.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Sorry 'Bout That</h3>
-<p>Cards for apologies, awkwardness, and making things right.</p>
+<p>For awkward moments, apologies, and making things right.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Life Updates</h3>
-<p>Breakups, new homes, new pets, and life's biggest changes.</p>
+<p>Moves, breakups, pets, relationships, and major life milestones.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Friendship Maintenance</h3>
-<p>Because meaningful friendships deserve maintenance too.</p>
+<p>Helping people stay connected in an increasingly busy world.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Existential Encouragement</h3>
-<p>Motivational cards for people who hate motivational cards.</p>
+<p>Motivation for people who dislike traditional motivational cards.</p>
 </div>
 
-<div class="collection-card">
+<div class="card">
 <h3>Ball Is Life</h3>
-<p>Basketball-themed cards for fans, rivals, and future Hall of Famers.</p>
+<p>Basketball-inspired cards for birthdays, rivalries, and celebrations.</p>
 </div>
 
 </div>
@@ -313,9 +328,11 @@ Featured Collections
 
 <section id="products">
 
-<h2 class="section-title">
-Best Sellers
-</h2>
+<h2 class="title">Best Sellers</h2>
+
+<p class="subtitle">
+Some of our most popular cards.
+</p>
 
 <div class="products">
 
@@ -323,16 +340,16 @@ Best Sellers
 
 good4you.jpg
 
-<div class="product-info">
+<div class="product-content">
 
 <h3>The Eras Degree</h3>
 
 <p>
-You've entered a new era.
-</p>
-
-<p>
-Graduation card inspired by modern concert-tour culture.
+You've survived every era.
+The stressed era.
+The broke era.
+The "I have no idea what I'm doing" era.
+Now it's finally time for the graduate era.
 </p>
 
 <div class="price">$8.99</div>
@@ -343,13 +360,16 @@ Graduation card inspired by modern concert-tour culture.
 
 <div class="product">
 
-<img src="rebuildingyear.jpgss="product-info">
+rebuildingyear.jpg
+
+<div class="product-content">
 
 <h3>Rebuilding Year</h3>
 
 <p>
 You're not getting older.
 You're entering a rebuilding year.
+A collectible-style birthday card built for basketball fans.
 </p>
 
 <div class="price">$10.99</div>
@@ -360,15 +380,16 @@ You're entering a rebuilding year.
 
 <div class="product">
 
-<arisonthefloor.jpg
+barisonthefloor.jpg
 
-<div class="product-info">
+<div class="product-content">
 
 <h3>The Bar Is On The Floor</h3>
 
 <p>
-The good news:
+The good news?
 The bar is incredibly low.
+Encouragement for anyone trying their best one day at a time.
 </p>
 
 <div class="price">$8.99</div>
@@ -383,78 +404,77 @@ The bar is incredibly low.
 
 <section id="about" class="about">
 
-<h2 class="section-title">
-About Us
-</h2>
+<h2 class="title">About Trending Traditions</h2>
+
+<div class="about-text">
 
 <p>
 
-Trending Traditions was founded on the belief that meaningful
-connection should not be lost in an increasingly digital world.
+Trending Traditions was founded on the belief that meaningful human connection should not disappear in an increasingly digital world.
 
-While technology has made communication faster than ever,
-many interactions have become temporary. Text messages disappear,
-notifications are forgotten, and social media posts quickly fade
-from memory.
+While technology has made communication easier than ever, many interactions have become temporary. Text messages disappear, social media posts get buried, and notifications are quickly forgotten.
 
-At the same time, young consumers are rediscovering physical media
-through vinyl records, film photography, books, and collectibles.
-Trending Traditions brings that same philosophy to greeting cards.
+At the same time, younger generations are rediscovering physical media through vinyl records, printed books, film photography, trading cards, and collectibles.
 
-We create products inspired by sports, music, entertainment,
-and the cultural moments that shape modern life while preserving
-the timeless emotional impact of card-giving.
+We believe greeting cards deserve a comeback too.
+
+Trending Traditions combines the heritage of traditional card-giving with the culture that shapes modern life. Inspired by music, sports, entertainment, and shared experiences, our cards transform fleeting trends into meaningful keepsakes.
 
 </p>
+
+</div>
 
 </section>
 
 <section id="policies">
 
-<h2 class="section-title">
-Store Policies
-</h2>
+<h2 class="title">Store Policies & FAQ</h2>
 
 <div class="policy-grid">
 
-<div class="policy-card">
+<div class="policy">
 
 <h3>Shipping</h3>
 
 <p>
+
 Orders are fulfilled through print-on-demand partners.
-Most orders are produced within 3-5 business days and
-include tracking information.
+
+Most orders ship within 3-5 business days and include tracking information.
+
 </p>
 
 </div>
 
-<div class="policy-card">
+<div class="policy">
 
 <h3>Returns</h3>
 
 <p>
-Returns are accepted for damaged,
-misprinted, or incorrect products.
-Customers should contact support within
-14 days of delivery.
+
+Returns are accepted for damaged, incorrect, or misprinted products.
+
+Customers should contact us within 14 days of delivery.
+
 </p>
 
 </div>
 
-<div class="policy-card">
+<div class="policy">
 
-<h3>FAQ</h3>
+<h3>Frequently Asked Questions</h3>
 
 <p>
-Do you offer personalization?
-Yes.
 
-Do you offer bulk ordering?
-Yes.
+Do you offer customized cards?<br>
+Yes.<br><br>
 
-Will collections change?
-Absolutely. New cultural moments create new cards.
+Do you offer bulk orders?<br>
+Yes.<br><br>
+
+Will collections change?<br>
+Absolutely. New cultural moments create new card ideas.
+
 </p>
 
 </div>
@@ -465,16 +485,14 @@ Absolutely. New cultural moments create new cards.
 
 <section class="newsletter">
 
-<h2>
-Stay In The Loop
-</h2>
+<h2 class="title">Stay In The Loop</h2>
 
 <p>
-Be the first to see limited releases,
-holiday collections, and new card drops.
+Be the first to hear about new releases,
+seasonal collections, and limited-edition drops.
 </p>
 
-<input type="email" placeholder="Email Address">
+<input type="email" placeholder="Enter Email Address">
 
 <button>Subscribe</button>
 
@@ -482,25 +500,19 @@ holiday collections, and new card drops.
 
 <footer>
 
-<h3>
-Trending Traditions
-</h3>
+<h3>Trending Traditions</h3>
 
 <p>
 Meaningful Cards For Modern Moments
 </p>
 
-<div class="socials">
+<br>
 
 #Instagram</a>
-
 #TikTok</a>
-
 #Contact</a>
 
-</div>
-
-<br>
+<br><br>
 
 <p>
 © 2026 Trending Traditions
